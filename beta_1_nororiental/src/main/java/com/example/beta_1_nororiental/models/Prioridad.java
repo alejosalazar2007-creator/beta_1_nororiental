@@ -1,4 +1,4 @@
-package com.example.BIZTRACK2.models;
+package com.example.beta_1_nororiental.models;
 
 import jakarta.persistence.*;
 import java.util.List;
