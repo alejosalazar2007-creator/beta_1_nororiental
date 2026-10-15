@@ -1,7 +1,5 @@
 package com.example.beta_1_nororiental.Service;
 
-package services;
-
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -11,11 +9,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.example.BIZTRACK2.models.Reto;
-import com.example.BIZTRACK2.repository.IRepositorioReto;
+import com.example.beta_1_nororiental.models.Reto;
+import com.example.beta_1_nororiental.Repository.IRepositorioReto;
 
 @Service
 public class ServicioReto {
+
     // inyecto una dependencia hacia el repositorio
     @Autowired
     private IRepositorioReto repositorioReto;
@@ -44,8 +43,6 @@ public class ServicioReto {
 
             // Modificando los datos
             retoEncontrado.setNombre(datosNuevos.getNombre());
-            retoEncontrado.setFechaInicio(datosNuevos.getFechaInicio());
-            retoEncontrado.setFechaFin(datosNuevos.getFechaFin());
             retoEncontrado.setEstado(datosNuevos.getEstado());
 
             // Guardo los cambios
