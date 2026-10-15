@@ -33,11 +33,6 @@ public class Registro {
     private String estado;
 
 
-
-    @ManyToOne 
-    @JoinColumn(name = "id_usuario", nullable = false)
-    private Usuario usuario;
-
     @ManyToOne 
     @JoinColumn (name = "id_reto", nullable = false)
     @JsonIgnoreProperties("registros")
