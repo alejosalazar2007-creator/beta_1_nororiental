@@ -3,7 +3,7 @@ package com.example.beta_1_nororiental.models;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.example.beta_1_nororiental.models.Reto;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.Column;
@@ -32,10 +32,11 @@ public class Registro {
     @Column(name ="estado", nullable = false, unique = false, length = 50)  
     private String estado;
 
+    
 
     @ManyToOne 
     @JoinColumn (name = "id_reto", nullable = false)
-    @JsonIgnoreProperties("registros")
+    @JsonIgnoreProperties({"registros"})
     private Reto reto;
 
 
